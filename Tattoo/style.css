@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+
+@font-face {
+    font-family: 'Angel wish';
+    src: url('Angel wish.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    padding-bottom: 3000px;
+}
+
+header{
+    width: calc(100vw - 2rem);
+    height: 2.8rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+}
+
+.toggle-btn{
+    top: 1rem;
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    cursor: pointer;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.toggle-btn i{
+    color: grey;
+    font-size: 1.8rem;
+}
+
+
+.nav-links{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.95;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99;
+    display: none;
+}
+
+.nav-links.active{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.95;
+    position: fixed;
+    overflow: hidden;
+    animation-timing-function: ease-in-out;
+    animation: xron 1000ms forwards;
+    z-index: 99;
+}
+
+
+@keyframes xron {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(100%);
+    }
+    99% {
+      visibility: hidden;
+      opacity: 0.95;
+      transform: translateX(0%);
+    }
+    100%{
+    animation-fill-mode: forwards;
+    }
+  }
+
+.nav-links ul{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+    gap: 3rem;
+    margin-top: 6rem;
+}
+
+.nav-links li a{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: .2rem;
+    color: grey;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+
+
+.img1 img{
+    margin-top: 3rem;
+    height: 4rem;
+    color: grey;
+}
+
+.background-title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    width: 100vw;
+    height: calc(150vw);
+    font-family: 'Angel wish';
+}
+
+.background-title .bakimg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+
+.title-name{
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.title-name p{
+    margin: auto;
+    color: rgb(163, 163, 163);
+    font-size: 5rem;
+    text-align: center;
+}
+
+.title-name p span{
+    color: red;
+}
+
+
+.gallery1{
+    margin: auto;
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.gallery1 img{
+    width: 100%;
+}
+
+.artist-title{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.artist p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+
+
+@media (min-width: 730px) {
+    .gallery1{
+        margin-top: 7rem;
+    }
+    
+}
