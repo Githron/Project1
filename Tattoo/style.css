@@ -147,6 +147,20 @@ header{
 }
 
 
+.artist-img{
+    margin: auto;
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.artist-img img{
+    width: 100%;
+    max-width: 600px;
+}
+
 .gallery1{
     margin: auto;
     display: flex;
@@ -158,6 +172,7 @@ header{
 
 .gallery1 img{
     width: 100%;
+    max-width: 600px;
 }
 
 .artist-title{
@@ -177,6 +192,17 @@ header{
     margin: 0 1rem;
     font-weight: 400;
     margin-bottom: 2rem;
+}
+
+
+.about{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
 }
 
 
