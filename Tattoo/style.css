@@ -177,7 +177,7 @@ header{
 
 .gallery1 img{
     width: 100%;
-    max-width: 600px;
+    max-width: 250px;
 }
 
 .artist-title{
@@ -209,6 +209,25 @@ header{
     font-family: 'Bebas Neue', cursive;
     text-align: center;
 }
+
+.gallery-title{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.gallerys{
+    display: grid;
+    gap: 2rem;
+    margin: 0 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
 
 
 
