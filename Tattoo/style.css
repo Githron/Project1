@@ -220,6 +220,21 @@ header{
   
 }
 
+.Seemore{
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: grey;
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+}
+
+.Seemore a{
+  text-decoration: none;
+  text-emphasis: none;
+}
+
 
 .swiper {
   width: 100%;
