@@ -1,17 +1,3 @@
-
-            var sound = new Howl({
-            src: ['Like A Stone [glO58_4sXWM].mp3'],
-            autoplay: true,
-            loop: true,
-            volume: 0.2,
-            onend: function() {
-                console.log('Finished!');
-            }
-            });
-            
-
-
-
 const toggleButton = document.getElementsByClassName('toggle-btn')[0]
 const navbarLinks = document.getElementsByClassName('nav-links')[0]
 const artistButton = document.getElementsByClassName('artist-btn')[0]
@@ -61,3 +47,12 @@ var swiper = new Swiper(".mySwiper", {
 
 
  
+            var sound = new Howl({
+            src: ['Like A Stone [glO58_4sXWM].mp3'],
+            autoplay: true,
+            loop: true,
+            volume: 0.2,
+            onend: function() {
+                console.log('Finished!');
+            }
+            });
