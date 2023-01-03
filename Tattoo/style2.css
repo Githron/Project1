@@ -1,0 +1,40 @@
+.background-titles{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    width: 100vw;
+    height: 300px;
+    font-family: 'Angel wish';
+  }
+
+
+  .gallery-title2{
+    margin-bottom: 2rem;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+
+  .myworks{
+    display: grid;
+    gap: 1rem;
+    margin: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+
+.myworks-gallery{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myworks-gallery img{
+    width: 100%;
+    max-width: 250px;
+}
