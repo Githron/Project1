@@ -233,6 +233,16 @@ header{
 
 .gallery-title{
     margin-top: 5rem;
+    margin-bottom: 1rem;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.services{
+    margin-top: 2rem;
     margin-bottom: 3rem;
     color: grey;
     font-size: 1.3rem;

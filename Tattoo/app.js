@@ -4,6 +4,9 @@ const artistButton = document.getElementsByClassName('artist-btn')[0]
 const homeButton = document.getElementsByClassName('home-btn')[0]
 const aboutButton = document.getElementsByClassName('about-btn')[0]
 const galleryButton = document.getElementsByClassName('gallery-btn')[0]
+const servicesButton = document.getElementsByClassName('services-btn')[0]
+
+
 
 
 
@@ -13,6 +16,10 @@ toggleButton.addEventListener('click', () => {
 
 galleryButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
+})
+
+servicesButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
 })
 
 artistButton.addEventListener('click', () => {
