@@ -140,13 +140,43 @@ header{
     position: absolute;
     z-index: -1;
     width: 100%;
+    animation: bakimg 1000ms forwards;
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes bakimg {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 
 
 .title-name{
     z-index: 2;
     margin: 0 auto;
+    animation: tname 1000ms forwards;
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes tname {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 
 .title-name p{
     margin: auto;
