@@ -70,11 +70,24 @@
           <h1>ARTIST</h1>
         </div>
 
-        <p>
-          Fb Acct: <a href="https://www.facebook.com/bugoy1989?mibextid=ZbWKwL">Nash</a> <br>
-          contact #: 09263641559<br>
-          
-        </p>
+       <div class="links">
+
+        <a href="https://www.facebook.com/bugoy1989?mibextid=ZbWKwL"><i class="ri-facebook-box-fill"></i></a>
+        
+        <button onclick="copyText()"><i class="ri-phone-fill"></i></button>
+      
+        <script>
+         function copyText() {
+            var hiddenText = "09263641559";
+            navigator.clipboard.writeText(hiddenText);
+            alert("phone  Number copied to clipboard!");
+          }
+
+        </script>
+      </div>
+
+        
+        
 
         <div class="artist-detail">
           <div class="artist-img">
@@ -141,7 +154,7 @@
         </div>
 
         <div class="Seemore">
-            <h1><a href="https://githron.github.io/Project1/Tattoo/index2.html" target="_blank">See More</a></h1>
+            <h1><a href="/Tattoo/index2.html" target="_blank">See More</a></h1>
           </div>
 
 
