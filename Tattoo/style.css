@@ -301,7 +301,7 @@ header{
 
 .Seemore a{
   text-decoration: none;
-  text-emphasis: none;
+  color: inherit;
 }
 
 
@@ -348,6 +348,7 @@ header{
 
 .col-12 a{
     text-decoration: none;
+    color: rgb(255, 55, 0);
 }
 
 .col-12 i{
