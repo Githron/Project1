@@ -36,7 +36,7 @@
 
 
     <div class="animate">
-        <div class="nav-links">
+        <div id="myDiv" class="nav-links">
           <ul>
             <li><a class="home-btn" href="index.html#home">Home</a></li>
             <li><a class="about-btn" href="index.html#about">About</a></li>
@@ -44,9 +44,28 @@
             <li><a class="services-btn" href="index.html#g-services">Services</a></li>
             <li><a class="gallery-btn" href="index.html#g-title">My Works</a></li>
           </ul>
+
+          <script>
+            function toggle() {
+              var element = document.getElementById("myDiv");
+              if (element.style.opacity == 0) {
+                element.style.display = 'flex';
+                element.style.opacity = 0;
+                setTimeout(function() {
+                  element.style.opacity = .95;
+                }, 10);
+              } else {
+                setTimeout(function() {
+                  element.style.display = 'none';
+                }, 1000);
+                element.style.opacity = 0;
+              }
+            }
+          </script>
+
         </div>
   
-        <div class="toggle-btn">
+        <div onclick="toggle()" class="toggle-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
