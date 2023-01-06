@@ -17,3 +17,19 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  function toggle() {
+    var element = document.getElementById("myDiv");
+    if (element.style.opacity == 0) {
+      element.style.display = 'flex';
+      element.style.opacity = 0;
+      setTimeout(function() {
+        element.style.opacity = .95;
+      }, 10);
+    } else {
+      setTimeout(function() {
+        element.style.display = 'none';
+      }, 1000);
+      element.style.opacity = 0;
+    }
+  }
