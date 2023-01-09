@@ -3,9 +3,9 @@ window.addEventListener("load", function() {
   var preloader = document.getElementById("preloader");
   setTimeout(function() {
     preloader.style.display = "none";
-  }, 200); // milliseconds
+  }, 2000); // milliseconds
   });
-  
+
 
 var swiper = new Swiper(".mySwiper", {
     loop: true,
