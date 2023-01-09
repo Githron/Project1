@@ -1,8 +1,12 @@
 
 window.addEventListener("load", function() {
   var preloader = document.getElementById("preloader");
+  const xelement = document.querySelector('.bakimg');
+  const zelement = document.querySelector('.title-name');
   setTimeout(function() {
     preloader.style.display = "none";
+    xelement.style.animationPlayState = 'running';
+    zelement.style.animationPlayState = 'running';
   }, 2000); // milliseconds
   });
 
