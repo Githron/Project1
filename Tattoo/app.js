@@ -1,16 +1,34 @@
 //Preloader Gif animation Loading screen
-window.addEventListener("load", function() {
-  var preloader = document.getElementById("preloader");
-  const xelement = document.querySelector('.bakimg');
-  const zelement = document.querySelector('.title-name');
-  const belement = document.querySelector('.fadeX');
-  setTimeout(function() {
-    preloader.style.display = "none";
-    xelement.style.animationPlayState = 'running';
-    zelement.style.animationPlayState = 'running';
-    belement.style.animationPlayState = 'running';
-  }, 500); // milliseconds
+
+// window.addEventListener("load", function() {
+//   var preloader = document.getElementById("preloader");
+//   const xelement = document.querySelector('.bakimg');
+//   const zelement = document.querySelector('.title-name');
+//   const belement = document.querySelector('.fadeX');
+//   setTimeout(function() {
+//     preloader.style.display = "none";
+//     xelement.style.animationPlayState = 'running';
+//     zelement.style.animationPlayState = 'running';
+//     belement.style.animationPlayState = 'running';
+//   }, 500); // milliseconds
+//   });
+
+  window.addEventListener("load", function() {
+    var preloader = document.getElementById("preloader");
+    const xelement = document.querySelector('.bakimg');
+    const zelement = document.querySelector('.title-name');
+    const belement = document.querySelector('.fadeX');
+    setTimeout(function() {
+      preloader.classList.add("fade-out");
+      xelement.style.animationPlayState = 'running';
+      zelement.style.animationPlayState = 'running';
+      belement.style.animationPlayState = 'running';
+      setTimeout(() => {
+          preloader.style.display = "none";
+      }, 1000);
+    }, 1000); // milliseconds
   });
+  
 
 // Swiper animate Auto
 var swiper = new Swiper(".mySwiper", {
