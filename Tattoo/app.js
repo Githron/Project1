@@ -1,4 +1,4 @@
-
+//Preloader Gif animation Loading screen
 window.addEventListener("load", function() {
   var preloader = document.getElementById("preloader");
   const xelement = document.querySelector('.bakimg');
@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
   }, 1000); // milliseconds
   });
 
-
+// Swiper animate Auto
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 30,
@@ -29,6 +29,25 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  // Oberver Intersection animate when scrolling
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+    entry.target.style.animationPlayState = "running";
+    } else {
+    entry.target.style.animationPlayState = "paused";
+    }
+    });
+    });
+    
+    const artistImgElements = document.querySelectorAll(".artist-img");
+    artistImgElements.forEach(element => {
+    observer.observe(element);
+    });
+
+
+
+// Toggle Menu
   function toggle() {
     var element = document.getElementById("myDiv");
     if (element.style.opacity == 0) {
