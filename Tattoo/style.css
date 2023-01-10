@@ -180,6 +180,7 @@ header{
 
 
 .title-name{
+  user-select: none;
     z-index: 2;
     margin: 0 auto;
     animation: tname 1000ms forwards;
