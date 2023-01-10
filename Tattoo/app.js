@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     preloader.style.display = "none";
     xelement.style.animationPlayState = 'running';
     zelement.style.animationPlayState = 'running';
-  }, 2000); // milliseconds
+  }, 1000); // milliseconds
   });
 
 
