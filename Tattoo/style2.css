@@ -16,6 +16,22 @@
   z-index: -2;
   height: 100%;
   object-fit: cover;
+  animation: bakimg2 1000ms forwards;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+@keyframes bakimg2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
   .gallery-title2{
