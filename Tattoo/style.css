@@ -360,6 +360,19 @@ header{
   object-fit: cover;
 }
 
+/* Target Pagination */
+.swiper-pagination span {
+  border: none;
+  background: gray;
+}
+
+.swiper-pagination span.swiper-pagination-bullet-active {
+  background: gray;
+  border: none;
+} /* end */
+
+
+
 .col-12{
   position: relative;
   top: 3rem;
