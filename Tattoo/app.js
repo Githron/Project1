@@ -32,18 +32,19 @@ var swiper = new Swiper(".mySwiper", {
   // Oberver Intersection animate when scrolling
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-    entry.target.style.animationPlayState = "running";
-    } else {
-    entry.target.style.animationPlayState = "paused";
-    }
+      if (entry.intersectionRatio >= 0.25) {
+        // The element is visible on at least 25% of the view
+        entry.target.style.animationPlayState = "running";
+      } else {
+        entry.target.style.animationPlayState = "paused";
+      }
     });
-    });
-    
-    const artistImgElements = document.querySelectorAll(".artist-img");
-    artistImgElements.forEach(element => {
+  }, { threshold: [0.25] });
+  const artistImgElements = document.querySelectorAll(".artist-img");
+  artistImgElements.forEach(element => {
     observer.observe(element);
-    });
+  });
+  
 
 
 
