@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
     xelement.style.animationPlayState = 'running';
     zelement.style.animationPlayState = 'running';
     belement.style.animationPlayState = 'running';
-  }, 1000); // milliseconds
+  }, 500); // milliseconds
   });
 
 // Swiper animate Auto
