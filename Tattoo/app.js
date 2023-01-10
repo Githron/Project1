@@ -10,7 +10,7 @@
 //     xelement.style.animationPlayState = 'running';
 //     zelement.style.animationPlayState = 'running';
 //     belement.style.animationPlayState = 'running';
-//   }, 500); // milliseconds
+//   }, 1000); // milliseconds
 //   });
 
   window.addEventListener("load", function() {
@@ -19,7 +19,6 @@
     const zelement = document.querySelector('.title-name');
     const belement = document.querySelector('.fadeX');
     setTimeout(function() {
-      preloader.classList.add("fade-out");
       xelement.style.animationPlayState = 'running';
       zelement.style.animationPlayState = 'running';
       belement.style.animationPlayState = 'running';
