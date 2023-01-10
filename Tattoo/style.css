@@ -193,7 +193,7 @@ header{
 
 .title-name p{
     margin: auto;
-    color: rgb(163, 163, 163);
+    color: rgb(255, 255, 255);
     font-size: 5rem;
     text-align: center;
 }
@@ -447,6 +447,13 @@ header{
 @media (min-width: 730px) {
     .gallery1{
         margin-top: 7rem;
+    }
+    .background-title{
+    height: calc(36vw);
+    }
+    .bakimg{
+      height: inherit;
+      object-fit: cover;
     }
     
 }
