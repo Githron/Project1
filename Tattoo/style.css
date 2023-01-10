@@ -19,6 +19,26 @@ body{
     background-color: black;
 }
 
+.fadeX{
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.overflowhide{
+    height: 100vh;
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header{
     width: calc(100vw - 2rem);
     height: 2.8rem;
@@ -40,6 +60,17 @@ header{
     z-index: 99999;
     background-color: rgb(0, 0, 0);
     color: gray;
+    animation: fadeOut 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   #preloader .loading {
@@ -54,11 +85,10 @@ header{
     width: 100%;
   }
 
+  
 
-.overflowhide{
-    height: 100vh;
-    overflow: auto;
-}
+
+
 
 
 

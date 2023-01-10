@@ -35,226 +35,231 @@
   <body> 
 
 
-      <div id="preloader">
-        <div class="loading">
-          <img id="myGif" src="img/preloader.gif" alt="">
-        </div>
-      </div>
-
-
-    <div class="animate">
-      <div id="myDiv" class="nav-links">
-        <ul>
-          <li><a onclick="toggle()" class="home-btn" href="#home">Home</a></li>
-          <li><a onclick="toggle()" class="about-btn" href="#about">About</a></li>
-          <li><a onclick="toggle()" class="artist-btn" href="#artist">Artist</a></li>
-          <li><a onclick="toggle()" class="services-btn" href="#g-services">Services</a></li>
-          <li><a onclick="toggle()" class="gallery-btn" href="#g-title">My Works</a></li>
-          <li><a onclick="toggle()" class="aftercare-btn" href="#after-care">Aftercare</a></li>
-        </ul>
-
-      </div>
-
-      <div onclick="toggle()" class="toggle-btn">
-        <i class="ri-menu-line"></i>
-      </div>
-    </div>
-
-    <div class="overflowhide">
-      <div id="home" class="top1">
-        <div class="background-title">
-          <img class="bakimg" src="img/IMG_20221227_233155.jpg" alt="" />
-
-          <div class="title-name">
-            <p><span>N</span>ash Tattoo</p>
-          </div>
-
-          <header>
-            <div class="img1">
-              <img src="img/skull-logo2.png" alt="" />
+          <div id="preloader">
+            <div class="loading">
+              <img id="myGif" src="img/preloader.gif" alt="">
             </div>
-          </header>
-        </div>
-      </div>
-
-      <div class="artist">
-        <div id="about" class="about">
-          <h1>About</h1>
-        </div>
-
-        <p>
-          Designing tattoos starts from the wishes of the customer. We prefer to
-          customize a unique tattoo for everyone. You can bring a sketch or
-          other material which can be helpful for designing the piece or come.
-        </p>
-
-        <div id="artist" class="artist-title">
-          <h1>ARTIST</h1>
-        </div>
-
-       <div class="links">
-
-        <a href="https://www.facebook.com/bugoy1989?mibextid=ZbWKwL"><i class="ri-facebook-box-fill"></i></a>
-        
-        <button onclick="copyText()"><i class="ri-phone-fill"></i></button>
-      
-        <script>
-         function copyText() {
-            var hiddenText = "09263641559";
-            navigator.clipboard.writeText(hiddenText);
-            alert("phone  Number copied to clipboard!");
-          }
-
-        </script>
-      </div>
-
-        
-        
-
-        <div class="artist-detail">
-          <div class="artist-img">
-            <img src="img/IMG_20221228_151025.jpg" alt="" />
           </div>
 
-          <div class="artist-img">
-            <img
-              src="img/facebook_1672161772957_7013554812960991726.jpg"
-              alt=""
-            />
+    <div class="fadeX">
+
+
+        <div class="animate">
+          <div id="myDiv" class="nav-links">
+            <ul>
+              <li><a onclick="toggle()" class="home-btn" href="#home">Home</a></li>
+              <li><a onclick="toggle()" class="about-btn" href="#about">About</a></li>
+              <li><a onclick="toggle()" class="artist-btn" href="#artist">Artist</a></li>
+              <li><a onclick="toggle()" class="services-btn" href="#g-services">Services</a></li>
+              <li><a onclick="toggle()" class="gallery-btn" href="#g-title">My Works</a></li>
+              <li><a onclick="toggle()" class="aftercare-btn" href="#after-care">Aftercare</a></li>
+            </ul>
+
           </div>
 
-          <div class="artist-img">
-            <img src="img/IMG_20230103_112258.jpg" alt="" />
+          <div onclick="toggle()" class="toggle-btn">
+            <i class="ri-menu-line"></i>
           </div>
-
         </div>
 
+        <div class="overflowhide">
 
-
-
-      </div>
-
-      <div id="g-services" class="gallery-title">
-        <h1>Services</h1>
-      </div>
-
-      <div class="services">
-        <ul>
-          <li>Custom tattoo design</li>
-          <li>Cover-up tattoos</li>
-        </ul>
-      </div>
-
-      
-
-      <div id="g-title" class="gallery-title">
-        <h1>Recent Works</h1>
-      </div>
-
-      <div class="body-slides">
-
-        
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20221231_095638.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_105635.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_113802.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_114251.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_114146.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_114332.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_114737.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_115258.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/Tattoo/IMG_20230103_113943.jpg" alt="">
-                </div>
-          </div>
-
-          <!--            
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-           -->
-
-                <div class="swiper-pagination"></div>
-           
-        </div>
-
-        
-
-        <div class="Seemore">
-            <h1><a href="index2.html" target="_blank">See More<i class="ri-arrow-right-s-line"></i></a></h1>
-          </div>
           
-          <hr>
-          <br>
+
+          <div id="home" class="top1">
+            <div class="background-title">
+              <img class="bakimg" src="img/IMG_20221227_233155.jpg" alt="" />
+
+              <div class="title-name">
+                <p><span>N</span>ash Tattoo</p>
+              </div>
+
+              <header>
+                <div class="img1">
+                  <img src="img/skull-logo2.png" alt="" />
+                </div>
+              </header>
+            </div>
+          </div>
+
+          <div class="artist">
+            <div id="about" class="about">
+              <h1>About</h1>
+            </div>
+
+            <p>
+              Designing tattoos starts from the wishes of the customer. We prefer to
+              customize a unique tattoo for everyone. You can bring a sketch or
+              other material which can be helpful for designing the piece or come.
+            </p>
+
+            <div id="artist" class="artist-title">
+              <h1>ARTIST</h1>
+            </div>
+
+          <div class="links">
+
+            <a href="https://www.facebook.com/bugoy1989?mibextid=ZbWKwL"><i class="ri-facebook-box-fill"></i></a>
+            
+            <button onclick="copyText()"><i class="ri-phone-fill"></i></button>
+          
+            <script>
+            function copyText() {
+                var hiddenText = "09263641559";
+                navigator.clipboard.writeText(hiddenText);
+                alert("phone  Number copied to clipboard!");
+              }
+
+            </script>
+          </div>
+
+            
+            
+
+            <div class="artist-detail">
+              <div class="artist-img">
+                <img src="img/IMG_20221228_151025.jpg" alt="" />
+              </div>
+
+              <div class="artist-img">
+                <img
+                  src="img/facebook_1672161772957_7013554812960991726.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="artist-img">
+                <img src="img/IMG_20230103_112258.jpg" alt="" />
+              </div>
+
+            </div>
 
 
-        
 
 
-      </div>
+          </div>
+
+          <div id="g-services" class="gallery-title">
+            <h1>Services</h1>
+          </div>
+
+          <div class="services">
+            <ul>
+              <li>Custom tattoo design</li>
+              <li>Cover-up tattoos</li>
+            </ul>
+          </div>
+
+          
+
+          <div id="g-title" class="gallery-title">
+            <h1>Recent Works</h1>
+          </div>
+
+          <div class="body-slides">
+
+            
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20221231_095638.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_105635.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_113802.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_114251.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_114146.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_114332.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_114737.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_115258.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Tattoo/IMG_20230103_113943.jpg" alt="">
+                    </div>
+              </div>
+
+              <!--            
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+              -->
+
+                    <div class="swiper-pagination"></div>
+              
+            </div>
+
+            
+
+            <div class="Seemore">
+                <h1><a href="index2.html" target="_blank">See More<i class="ri-arrow-right-s-line"></i></a></h1>
+              </div>
+              
+              <hr>
+              <br>
 
 
-      <div id="after-care" class="aftercare">
-        <h1>Aftercare</h1>
+            
 
-        <ul>
-          <li>
-            <p>Keep the tattoo bandaged for at least the first 2-4 hours after getting it.</p>
-          </li>
-          <li>
-            <p>After removing the bandage, wash the tattoo gently with soap and warm water. Pat the tattoo dry with a clean, soft towel.</p>
-          </li>
-          <li>
-            <p>Apply a thin layer of aftercare ointment or lotion, as directed by your tattoo artist.</p>
-          </li>
-          <li>
-            <p>Wash and moisturize your tattoo as needed, keeping it clean and moisturized throughout the healing process.</p>
-          </li>
-          <li>
-            <p>Avoid exposing your tattoo to direct sunlight or tanning beds for at least 2 weeks.</p>
-          </li>
-          <li>
-            <p>Avoid soaking your tattoo, such as in a bath or swimming pool, for the first 2 weeks.</p>
-          </li>
-          <li>
-            <p>Avoid scratching or picking at the tattoo, as this can cause scabbing and may lead to scarring or loss of color.</p>
-          </li>
-          <li>
-            <p>Take a picture of the tattoo immediately after it is done to use as a reference point.</p>
-          </li>
-          <li>
-            <p>Follow-up with the tattoo artist after a week, to check on the healing progress and address any questions or concerns.</p>
-          </li>
-        </ul>
 
-      </div>
+          </div>
 
-      <div class="col-12">
-      <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved <br> This is made with 
-        <i class="ri-service-line"></i> by <a href="https://githron.github.io/romelolacida.com/">R.adicaL</a></p>
-      </div>
 
-    </div>
+          <div id="after-care" class="aftercare">
+            <h1>Aftercare</h1>
+
+            <ul>
+              <li>
+                <p>Keep the tattoo bandaged for at least the first 2-4 hours after getting it.</p>
+              </li>
+              <li>
+                <p>After removing the bandage, wash the tattoo gently with soap and warm water. Pat the tattoo dry with a clean, soft towel.</p>
+              </li>
+              <li>
+                <p>Apply a thin layer of aftercare ointment or lotion, as directed by your tattoo artist.</p>
+              </li>
+              <li>
+                <p>Wash and moisturize your tattoo as needed, keeping it clean and moisturized throughout the healing process.</p>
+              </li>
+              <li>
+                <p>Avoid exposing your tattoo to direct sunlight or tanning beds for at least 2 weeks.</p>
+              </li>
+              <li>
+                <p>Avoid soaking your tattoo, such as in a bath or swimming pool, for the first 2 weeks.</p>
+              </li>
+              <li>
+                <p>Avoid scratching or picking at the tattoo, as this can cause scabbing and may lead to scarring or loss of color.</p>
+              </li>
+              <li>
+                <p>Take a picture of the tattoo immediately after it is done to use as a reference point.</p>
+              </li>
+              <li>
+                <p>Follow-up with the tattoo artist after a week, to check on the healing progress and address any questions or concerns.</p>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-12">
+          <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved <br> This is made with 
+            <i class="ri-service-line"></i> by <a href="https://githron.github.io/romelolacida.com/">R.adicaL</a></p>
+          </div>
+
+        </div>
 
     
-
+    </div>
     <script src="app.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

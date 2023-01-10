@@ -3,10 +3,12 @@ window.addEventListener("load", function() {
   var preloader = document.getElementById("preloader");
   const xelement = document.querySelector('.bakimg');
   const zelement = document.querySelector('.title-name');
+  const belement = document.querySelector('.fadeX');
   setTimeout(function() {
     preloader.style.display = "none";
     xelement.style.animationPlayState = 'running';
     zelement.style.animationPlayState = 'running';
+    belement.style.animationPlayState = 'running';
   }, 1000); // milliseconds
   });
 
