@@ -65,7 +65,7 @@ header{
   }
 
 @keyframes fadeOut {
-    0% {
+    50% {
       opacity: 1;
     }
     100% {
