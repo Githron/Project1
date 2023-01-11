@@ -25,8 +25,8 @@
       belement.style.animationPlayState = 'running';
       setTimeout(() => {
           preloader.style.display = "none";
-      }, 1000);
-    }, 1000); // milliseconds
+      }, 500);
+    }, 500); // milliseconds
   });
   
 
