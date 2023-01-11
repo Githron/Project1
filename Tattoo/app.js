@@ -26,7 +26,7 @@
       setTimeout(() => {
           preloader.style.display = "none";
       }, 1000);
-    }, 1000); // milliseconds
+    }, 0); // milliseconds
   });
   
 
