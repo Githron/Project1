@@ -19,6 +19,7 @@
     const zelement = document.querySelector('.title-name');
     const belement = document.querySelector('.fadeX');
     setTimeout(function() {
+      preloader.style.animationPlayState = 'running';
       xelement.style.animationPlayState = 'running';
       zelement.style.animationPlayState = 'running';
       belement.style.animationPlayState = 'running';
