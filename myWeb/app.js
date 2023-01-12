@@ -30,3 +30,22 @@ window.addEventListener("scroll", () => {
     previousScroll = currentScroll;
 });
 
+
+
+
+
+// Oberver Intersection animate when scrolling
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio >= 0.10) {
+      // The element is visible on at least 25% of the view
+      entry.target.style.animationPlayState = "running";
+    } else {
+      entry.target.style.animationPlayState = "paused";
+    }
+  });
+}, { threshold: [0.10] });
+const artistImgElements = document.querySelectorAll(".boxIn");
+artistImgElements.forEach(element => {
+  observer.observe(element);
+});
