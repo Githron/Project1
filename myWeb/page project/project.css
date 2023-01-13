@@ -1,97 +1,104 @@
 /* Top stqrts here */
 .topProject {
-  width: 100vw;
-  height: 260px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  background-color: #1f232f;
-  position: relative;
+    width: 100vw;
+    height: 260px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #1f232f;
+    position: relative;
 }
 
 .topProject img {
-  width: 120%;
-  max-width: 400px;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 120%;
+    max-width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* Top ends here */
 
 /* introProject stqrts here */
 .introWrapProject {
-  padding-top: 4.5rem;
+    padding-top: 4.5rem;
 }
 
 .introProject {
-  margin: 0 3.1rem;
-  padding-bottom: 8rem;
+    margin: 0 3.1rem;
+    padding-bottom: 8rem;
 }
 
 .introProject h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  margin: 0.55rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    margin: 0.55rem 0;
 }
 
-.introProject hr {
-  border: none; /* Remove the default border */
-  height: 1px; /* Set the height of the line */
-  background-color: rgb(186, 186, 186); /* Set the color of the line */
-  width: 100%; /* Set the width of the line */
-  margin-bottom: 1rem;
+.introProject .hr1 {
+    border: none; /* Remove the default border */
+    height: 1px; /* Set the height of the line */
+    background-color: rgb(186, 186, 186); /* Set the color of the line */
+    width: 100%; /* Set the width of the line */
+    margin-bottom: 1rem;
 }
 
 .introProject .parP {
-  font-size: 1rem;
-  line-height: 1.75;
-  font-weight: 350;
-  color: rgb(0, 0, 0);
-  margin-bottom: 5.4rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    font-weight: 350;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5.4rem;
 }
 
 .box {
-  width: 100%;
-  aspect-ratio: 100/76.5;
-  color: #1f232f;
-  border: 1px solid rgb(149, 149, 149);
-  border-left: none;
-  border-right: none;
-  text-align: center;
-  position: relative;
-  transition: background-color 1s ease;
+    width: 100%;
+    aspect-ratio: 100/76.5;
+    color: #1f232f;
+    border: 1px solid rgb(149, 149, 149);
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    position: relative;
+    transition: background-color 1s ease;
 }
-
 
 .pWrap {
     width: 76%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.hR{
-    margin: 1rem 0;
+.hR {
     border: none; /* Remove the default border */
+    height: 1px; /* Set the height of the line */
+    background-color: rgb(186, 186, 186); /* Set the color of the line */
+    margin: 1rem auto;
 }
-
 
 .pWrap .pCenter {
-  font-weight: 800;
+    font-weight: 800;
 }
 
-.pBelow{
+.pBelow {
     font-weight: 350;
     line-height: 1.75;
 }
 
 /* desktop */
 @media (min-width: 700px) {
-  .introProject {
-    margin: 0 7.5rem;
-  }
+    .introProject {
+        margin: 0 7.5rem;
+    }
+
+    .box {
+        aspect-ratio: 100/40;
+    }
+    .hR {
+        width: 50%;
+    }
 }
