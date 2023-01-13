@@ -46,27 +46,31 @@ artistImgElements.forEach((element) => {
     observer.observe(element);
 });
 
-// hover
-const box = document.querySelector(".box");
-const defaultColor = box.style.backgroundColor;
+
+
+
+// // hover initial
+// // Javascript
+const boxes = document.querySelectorAll(".box");
+const defaultColor = boxes[0].style.backgroundColor;
 const hR = document.querySelector(".hR");
 const cColor = document.querySelector(".pCenter");
 const bColor = document.querySelector(".pBelow");
 
-box.addEventListener("mouseover", function () {
-    box.style.backgroundColor = "#1f232f";
-    hR.style.height = "2px";
-    hR.style.backgroundColor = "rgb(126, 187, 242)";
-    cColor.style.color = "white";
-    bColor.style.color = "white";
+
+boxes.forEach(box => {
+  box.addEventListener("mouseover", function () {
+      box.style.backgroundColor = "#1f232f";
+      this.querySelector(".hR").style.height = "2px";
+      this.querySelector(".hR").style.backgroundColor = "rgb(126, 187, 242)";
+      this.querySelector(".pCenter").style.color = "white";
+      this.querySelector(".pBelow").style.color = "white";
+  });
+  box.addEventListener("mouseout", function () {
+      box.style.backgroundColor = defaultColor;
+      this.querySelector(".hR").style.height = "1px";
+      this.querySelector(".hR").style.backgroundColor = "gray";
+      this.querySelector(".pCenter").style.color = "#1f232f";
+      this.querySelector(".pBelow").style.color = "#1f232f";
+  });
 });
-
-box.addEventListener("mouseout", function () {
-    box.style.backgroundColor = defaultColor;
-    hR.style.height = "1px";
-    hR.style.backgroundColor = "gray";
-    cColor.style.color = "#1f232f";
-    bColor.style.color = "#1f232f";
-});
-
-

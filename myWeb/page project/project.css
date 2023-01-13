@@ -53,7 +53,7 @@
     margin-bottom: 5.4rem;
 }
 
-.box {
+.box, .box2{
     width: 100%;
     aspect-ratio: 100/76.5;
     color: #1f232f;
@@ -78,9 +78,10 @@
     height: 1px; /* Set the height of the line */
     background-color: rgb(186, 186, 186); /* Set the color of the line */
     margin: 1rem auto;
+    width: 80%;
 }
 
-.pWrap .pCenter {
+.pCenter {
     font-weight: 800;
 }
 
@@ -95,7 +96,7 @@
         margin: 0 7.5rem;
     }
 
-    .box {
+    .box, .box2 {
         aspect-ratio: 100/40;
     }
     .hR {
