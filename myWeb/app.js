@@ -1,3 +1,14 @@
+
+
+
+//THIS IS JQUERY div id = link
+$("#link").click(function(){
+  window.location.href = "https://githron.github.io/romelolacida.com/YT%20Clone/";
+});
+
+
+
+
 // @keyframes fadeIn {
 //     0% {opacity: 0;}
 //     100% {opacity: 1;}
@@ -45,6 +56,17 @@ const artistImgElements = document.querySelectorAll(".boxIn");
 artistImgElements.forEach((element) => {
     observer.observe(element);
 });
+const boxAnime = document.querySelectorAll(".box");
+boxAnime.forEach((element) => {
+  observer.observe(element);
+});
+
+
+
+
+//for PROJECT PAGES
+// Oberver Intersection animate when scrolling
+
 
 
 

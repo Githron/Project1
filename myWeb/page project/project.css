@@ -53,7 +53,7 @@
     margin-bottom: 5.4rem;
 }
 
-.box, .box2{
+.box{
     width: 100%;
     aspect-ratio: 100/76.5;
     color: #1f232f;
@@ -63,6 +63,26 @@
     text-align: center;
     position: relative;
     transition: background-color 1s ease;
+    animation: boX 1s ease-in-out forwards;
+}
+
+.box:nth-child(1) {
+    animation-delay: 0s;
+}
+.box:nth-child(2) {
+    animation-delay: .3s;
+}
+
+
+@keyframes boX {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .pWrap {
@@ -96,7 +116,7 @@
         margin: 0 7.5rem;
     }
 
-    .box, .box2 {
+    .box {
         aspect-ratio: 100/40;
     }
     .hR {
