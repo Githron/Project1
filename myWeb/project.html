@@ -11,10 +11,24 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
         />
+
+        <style>
+            .botton{
+                width: 120px;
+                height: 90px;
+                position: absolute;
+                background-color: aqua;
+                z-index: 99999;
+                cursor: pointer;
+                opacity: 0;
+            }
+        </style>
+
     </head>
     <body>
         <!-- header start -->
         <header id="target-div">
+            <div class="botton"></div>
             <div class="nav">
                 <a href="">PROJECT</a>
                 <a href="">ABOUT</a>
@@ -66,7 +80,8 @@
                         </div>
                     </a>
                     
-             <!-- JQUERY INSTEAD OF ANCHOR COZ IT BREAKS .box:nth-child -->
+
+                    <!-- JQUERY INSTEAD OF ANCHOR COZ IT BREAKS .box:nth-child -->
                     <div id="link" class="box">
                         <div class="pWrap">
                             <p class="pCenter">VIDEO STREAMING<br />WEBSITE</p>
@@ -74,6 +89,16 @@
                             <p class="pBelow">Front-end Development</p>
                         </div>
                     </div>
+
+                    <div class="box" style="position: relative;">
+                        <div class="pWrap">
+                            <p class="pCenter">Wip WEBSITE</p>
+                            <hr class="hR" />
+                            <p class="pBelow">Front-end Development</p>
+                        </div>
+                        <hr class="botHr">
+                    </div>
+
                 </div>
             </div>
         </div>

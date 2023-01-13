@@ -6,6 +6,10 @@ $("#link").click(function(){
   window.location.href = "https://githron.github.io/romelolacida.com/YT%20Clone/";
 });
 
+$(".botton").click(function(){
+  window.location.href = "index.html";
+});
+
 
 
 
