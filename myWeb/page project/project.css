@@ -63,6 +63,7 @@
     border-bottom: none;
     text-align: center;
     position: relative;
+    opacity: 0;
     transition: background-color 1s ease;
     animation: boX 1s ease-in-out forwards;
 }

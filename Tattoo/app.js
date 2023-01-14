@@ -13,6 +13,7 @@
 //   }, 1000); // milliseconds
 //   });
 
+//animate on preload
   window.addEventListener("load", function() {
     var preloader = document.getElementById("preloader");
     const xelement = document.querySelector('.bakimg');
@@ -28,6 +29,7 @@
       }, 1000);
     }, 0); // milliseconds
   });
+  //end
   
 
 // Swiper animate Auto
@@ -48,6 +50,8 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+  //end
+
 
   // Oberver Intersection animate when scrolling
   const observer = new IntersectionObserver(entries => {
@@ -64,6 +68,7 @@ var swiper = new Swiper(".mySwiper", {
   artistImgElements.forEach(element => {
     observer.observe(element);
   });
+//end
   
 
 
@@ -83,4 +88,4 @@ var swiper = new Swiper(".mySwiper", {
       }, 1000);
       element.style.opacity = 0;
     }
-  }
+  }//end

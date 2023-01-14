@@ -1,17 +1,13 @@
-
-
-
-//THIS IS JQUERY div id = link
-$("#link").click(function(){
-  window.location.href = "https://githron.github.io/romelolacida.com/YT%20Clone/";
+//THIS IS JQUERY div id = link anchor hrrf function
+$("#link").click(function () {
+    window.location.href =
+        "https://githron.github.io/romelolacida.com/YT%20Clone/";
 });
 
-$(".botton").click(function(){
-  window.location.href = "index.html";
+$(".botton").click(function () {
+    window.location.href = "index.html";
 });
-
-
-
+//end
 
 // @keyframes fadeIn {
 //     0% {opacity: 0;}
@@ -23,6 +19,7 @@ $(".botton").click(function(){
 //     100% {opacity: 0;}
 // }
 
+//NavBar Menu visible when scrollUp else hidden
 let element = document.getElementById("target-div");
 let previousScroll = window.pageYOffset;
 
@@ -41,8 +38,9 @@ window.addEventListener("scroll", () => {
     // Update the previous scroll position
     previousScroll = currentScroll;
 });
+//end
 
-// Oberver Intersection animate when scrolling
+//Oberver Intersection animate Content when visible on scrolling
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -56,47 +54,40 @@ const observer = new IntersectionObserver(
     },
     { threshold: [0.1] }
 );
+// Home Page
 const artistImgElements = document.querySelectorAll(".boxIn");
 artistImgElements.forEach((element) => {
     observer.observe(element);
 });
+//Project page Scroll animate
 const boxAnime = document.querySelectorAll(".box");
 boxAnime.forEach((element) => {
-  observer.observe(element);
+    observer.observe(element);
 });
+//end
 
-
-
-
-//for PROJECT PAGES
-// Oberver Intersection animate when scrolling
-
-
-
-
-
-// // hover initial
-// // Javascript
+//Javascript Mouse hover
 const boxes = document.querySelectorAll(".box");
 const defaultColor = boxes[0].style.backgroundColor;
 const hR = document.querySelector(".hR");
 const cColor = document.querySelector(".pCenter");
 const bColor = document.querySelector(".pBelow");
 
-
-boxes.forEach(box => {
-  box.addEventListener("mouseover", function () {
-      box.style.backgroundColor = "#1f232f";
-      this.querySelector(".hR").style.height = "2px";
-      this.querySelector(".hR").style.backgroundColor = "rgb(126, 187, 242)";
-      this.querySelector(".pCenter").style.color = "white";
-      this.querySelector(".pBelow").style.color = "white";
-  });
-  box.addEventListener("mouseout", function () {
-      box.style.backgroundColor = defaultColor;
-      this.querySelector(".hR").style.height = "1px";
-      this.querySelector(".hR").style.backgroundColor = "gray";
-      this.querySelector(".pCenter").style.color = "#1f232f";
-      this.querySelector(".pBelow").style.color = "#1f232f";
-  });
+boxes.forEach((box) => {
+    box.addEventListener("mouseover", function () {
+        box.style.backgroundColor = "#1f232f";
+        this.querySelector(".hR").style.height = "2px";
+        this.querySelector(".hR").style.backgroundColor = "rgb(126, 187, 242)";
+        this.querySelector(".pCenter").style.color = "white";
+        this.querySelector(".pBelow").style.color = "white";
+    });
+    box.addEventListener("mouseout", function () {
+        box.style.backgroundColor = defaultColor;
+        this.querySelector(".hR").style.height = "1px";
+        this.querySelector(".hR").style.backgroundColor = "gray";
+        this.querySelector(".pCenter").style.color = "#1f232f";
+        this.querySelector(".pBelow").style.color = "#1f232f";
+    });
 });
+
+//end
