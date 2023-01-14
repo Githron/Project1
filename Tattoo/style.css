@@ -1,46 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 
 @font-face {
-    font-family: 'Angel wish';
-    src: url('Angel wish.ttf');
+    font-family: "Angel wish";
+    src: url("Angel wish.ttf");
     font-weight: normal;
     font-style: normal;
-
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
 }
 
 /* after preloader fade in whole content */
-.fadeX{
-  animation: fadeIn 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
+.fadeX {
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 
-.overflowhide{
+.overflowhide {
     height: 100vh;
     overflow: auto;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-header{
+header {
     width: calc(100vw - 2rem);
     height: 2.8rem;
     margin: 1rem;
@@ -51,8 +49,8 @@ header{
     top: 0px;
 }
 
-  /* Add some style to the preloader */
-  #preloader {
+/* Add some style to the preloader */
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -64,37 +62,30 @@ header{
     animation: fadeOut 1s ease-in-out;
     animation-fill-mode: forwards;
     animation-play-state: paused;
-  }
+}
 
 @keyframes fadeOut {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
-  #preloader .loading {
+#preloader .loading {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     font: 14px arial;
-  }
+}
 
-  #preloader img{
+#preloader img {
     width: 100%;
-  }
+}
 
-  
-
-
-
-
-
-
-.toggle-btn{
+.toggle-btn {
     top: 1rem;
     position: fixed;
     width: 2rem;
@@ -106,42 +97,47 @@ header{
     text-decoration: none;
 }
 
-.toggle-btn i{
+.toggle-btn i {
     color: grey;
     font-size: 1.8rem;
 }
 
-
-.nav-links{
+.nav-links {
     width: 100vw;
     height: 100vh;
     background: black;
-    opacity: 0.95;
+    /* opacity: 0.95; */
     position: absolute;
     overflow: visible;
     z-index: 99;
-    display: none;
-    opacity: 0;
-    transition: opacity 1s;
-    animation: xslideIn .8s ease-in-out forwards;
-    transition: all 0.5s ease-out;
+    /* display: none; */
+    /* opacity: 0; */
+    /* transition: opacity 1s; */
+    /* animation: xslideIn .8s ease-in-out forwards; */
+    /* transition: all 0.5s ease-out;
+    transform: translateX(-100%); */
+    transition: all .8s ease;
     transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
 }
 
+.nav-links.open {
+    opacity: .95;
+    transform: translateX(0);
+    visibility: visible;
+}
 
-
-@keyframes xslideIn {
+/* @keyframes xslideIn {
     0% {
       transform: translateX(-100%);
     }
     100%{
       transform: translateX(0);
     }
-  }
-  
- 
+  } */
 
-.nav-links ul{
+.nav-links ul {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -150,36 +146,31 @@ header{
     margin-top: 6rem;
 }
 
-.nav-links li a{
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: .2rem;
+.nav-links li a {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.2rem;
     color: grey;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
-
-
-
-.img1 img{
+.img1 img {
     margin-top: 1rem;
     width: 80px;
     color: grey;
 }
 
-.background-title{
+.background-title {
     position: relative;
     display: flex;
     align-items: center;
     top: 0px;
     width: 100vw;
     height: calc(150vw);
-    font-family: 'Angel wish';
+    font-family: "Angel wish";
 }
 
-
-
-.background-title .bakimg{
+.background-title .bakimg {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -190,20 +181,19 @@ header{
 
 @keyframes bakimg {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     10% {
-      transform: translateX(-10%);
+        transform: translateX(-10%);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0%);
+        opacity: 1;
+        transform: translateX(0%);
     }
-  }
+}
 
-
-.title-name{
-  user-select: none;
+.title-name {
+    user-select: none;
     z-index: 2;
     margin: 0 auto;
     animation: tname 1000ms ease-in-out forwards;
@@ -212,37 +202,36 @@ header{
 
 @keyframes tname {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     10% {
-      transform: translateX(10%);
+        transform: translateX(10%);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0%);
+        opacity: 1;
+        transform: translateX(0%);
     }
-  }
+}
 
-.title-name p{
+.title-name p {
     margin: auto;
     color: rgb(255, 255, 255);
     font-size: 5rem;
     text-align: center;
 }
 
-.title-name p span{
+.title-name p span {
     color: red;
 }
 
-.artist-detail{
+.artist-detail {
     display: grid;
     gap: 2rem;
     margin: 0 3rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-
-.artist-img{
+.artist-img {
     margin: auto;
     display: flex;
     align-items: center;
@@ -252,253 +241,241 @@ header{
 }
 
 .artist-img:nth-child(1) {
-  animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 .artist-img:nth-child(2) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .artist-img:nth-child(3) {
-  animation-delay: .6s;
+    animation-delay: 0.6s;
 }
 
 @keyframes example {
-  0% {
-  opacity: 0;
-  transform: translateX(-20%);
-  }
-  50%{
-    opacity: .3;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
-.artist-img img{
+.artist-img img {
     width: 100%;
     max-width: 250px;
 }
 
-
-
-
-.artist-title{
+.artist-title {
     margin-top: 5rem;
     margin-bottom: 3rem;
     color: grey;
     font-size: 1.3rem;
-    letter-spacing: .2rem;
-    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    font-family: "Bebas Neue", cursive;
     text-align: center;
 }
 
-.links{
+.links {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.links button{
+.links button {
     background-color: transparent;
     border: none;
 }
 
-.artist i{
+.artist i {
     color: grey;
     font-size: 2.5rem;
-    margin: .5rem;
+    margin: 0.5rem;
 }
 
-.artist a{
+.artist a {
     text-decoration: none;
 }
 
-.artist p{
+.artist p {
     color: grey;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 0 3.5rem;
     font-weight: 400;
     margin-bottom: 2rem;
 }
 
-
-.about{
+.about {
     margin-top: 5rem;
     margin-bottom: 3rem;
     color: grey;
     font-size: 1.3rem;
-    letter-spacing: .2rem;
-    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    font-family: "Bebas Neue", cursive;
     text-align: center;
 }
 
-.gallery-title{
+.gallery-title {
     margin-top: 5rem;
     margin-bottom: 1rem;
     color: grey;
     font-size: 1.3rem;
-    letter-spacing: .2rem;
-    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    font-family: "Bebas Neue", cursive;
     text-align: center;
 }
 
-.services{
+.services {
     margin-top: 2rem;
     margin-bottom: 3rem;
     color: grey;
     font-size: 1.3rem;
-    letter-spacing: .2rem;
-    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    font-family: "Bebas Neue", cursive;
     text-align: center;
 }
 
-
-.body-slides{
-  margin: auto;
-  width: 85vw;
-  max-width: 400px;
-  height: auto;
-  margin-bottom: 3rem;
+.body-slides {
+    margin: auto;
+    width: 85vw;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 3rem;
 }
 
 .body-slides hr {
-  border: none; /* Remove the default border */
-  height: 1px; /* Set the height of the line */
-  background-color: grey; /* Set the color of the line */
-  width: 100%; /* Set the width of the line */
+    border: none; /* Remove the default border */
+    height: 1px; /* Set the height of the line */
+    background-color: grey; /* Set the color of the line */
+    width: 100%; /* Set the width of the line */
 }
 
-
-.Seemore{
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  color: grey;
-  font-size: .5rem;
-  letter-spacing: .2rem;
-  font-family: 'Bebas Neue', cursive;
-  text-align: center;
+.Seemore {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    color: grey;
+    font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+    font-family: "Bebas Neue", cursive;
+    text-align: center;
 }
 
-.Seemore a{
-  padding: .4rem 0;
-  padding-left: .6rem;
-  background-color: rgb(16, 16, 16);
-  text-decoration: none;
-  color: inherit;
+.Seemore a {
+    padding: 0.4rem 0;
+    padding-left: 0.6rem;
+    background-color: rgb(16, 16, 16);
+    text-decoration: none;
+    color: inherit;
 }
 
-.Seemore i{
-  position: relative;
-  top: .2rem;
+.Seemore i {
+    position: relative;
+    top: 0.2rem;
 }
-
 
 .swiper {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Target Pagination */
 .swiper-pagination span {
-  border: none;
-  background: gray;
+    border: none;
+    background: gray;
 }
 
 .swiper-pagination span.swiper-pagination-bullet-active {
-  background: gray;
-  border: none;
+    background: gray;
+    border: none;
 } /* end */
 
-
-
-.aftercare{
-  max-width: 600px;
-  color: gray;
-  padding: 0 3rem;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
+.aftercare {
+    max-width: 600px;
+    color: gray;
+    padding: 0 3rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
 }
 
-.aftercare h1{
-  font-size: 41.6px;
-  letter-spacing: .2rem;
-  margin-bottom: 3rem;
+.aftercare h1 {
+    font-size: 41.6px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
 }
 
-.aftercare p{
-  font-family: 'Raleway', sans-serif;
-  margin: 1rem 0;
+.aftercare p {
+    font-family: "Raleway", sans-serif;
+    margin: 1rem 0;
 }
 
-.col-12{
-  position: relative;
-  top: 3rem;
-  padding: .9rem 0;
-  background-color: rgb(16, 16, 16);
-  color: rgb(106, 103, 103);
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  margin-bottom: 1rem;
+.col-12 {
+    position: relative;
+    top: 3rem;
+    padding: 0.9rem 0;
+    background-color: rgb(16, 16, 16);
+    color: rgb(106, 103, 103);
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
-.col-12 p{
-  margin: 0 3.5rem;
+.col-12 p {
+    margin: 0 3.5rem;
 }
 
-.col-12 a{
+.col-12 a {
     text-decoration: none;
     color: rgb(205, 205, 205);
 }
 
-.col-12 i{
+.col-12 i {
     position: relative;
     top: 3px;
 }
 
-
-
 @media (min-width: 730px) {
-    .gallery1{
+    .gallery1 {
         margin-top: 7rem;
     }
-    .background-title{
-    height: calc(36vw);
+    .background-title {
+        height: calc(36vw);
     }
-    .bakimg{
-      height: inherit;
-      object-fit: cover;
+    .bakimg {
+        height: inherit;
+        object-fit: cover;
     }
-    
 }
