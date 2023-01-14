@@ -19,6 +19,7 @@ body{
     background-color: black;
 }
 
+/* after preloader fade in whole content */
 .fadeX{
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: forwards;
@@ -122,22 +123,23 @@ header{
     display: none;
     opacity: 0;
     transition: opacity 1s;
+    animation: xslideIn .8s ease-in-out forwards;
+    transition: all 0.5s ease-out;
+    transform: translateX(-100%);
 }
 
 
 
-@keyframes xron {
+@keyframes xslideIn {
     0% {
-      opacity: 0;
-    }
-    99% {
-      visibility: hidden;
-      opacity: 0.95;
+      transform: translateX(-100%);
     }
     100%{
-    animation-fill-mode: forwards;
+      transform: translateX(0);
     }
   }
+  
+ 
 
 .nav-links ul{
     display: flex;
@@ -204,8 +206,7 @@ header{
   user-select: none;
     z-index: 2;
     margin: 0 auto;
-    animation: tname 1000ms forwards;
-    animation-timing-function: ease-in-out;
+    animation: tname 1000ms ease-in-out forwards;
     animation-play-state: paused;
 }
 

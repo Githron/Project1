@@ -83,9 +83,26 @@ var swiper = new Swiper(".mySwiper", {
         element.style.opacity = .95;
       }, 10);
     } else {
+
       setTimeout(function() {
         element.style.display = 'none';
       }, 1000);
       element.style.opacity = 0;
     }
-  }//end
+  }         //end
+
+
+//trial
+// const button = document.getElementById("myDiv");
+// const slideout = document.getElementById("tBtn");
+
+// button.addEventListener("click", () => {
+//     slideout.classList.toggle("open");
+//     if (slideout.classList.contains("open")) {
+//         slideout.style.display = "block";
+//     } else {
+//         setTimeout(() => {
+//             slideout.style.display = "none";
+//         }, 500);
+//     }
+// });
