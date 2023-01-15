@@ -70,7 +70,7 @@ boxAnime.forEach((element) => {
 
 //Javascript Mouse hover
 const boxes = document.querySelectorAll(".box");
-// const defaultColor = boxes[0].style.backgroundColor;
+const defaultColor = boxes[0].style.backgroundColor;
 const hR = document.querySelector(".hR");
 const cColor = document.querySelector(".pCenter");
 const bColor = document.querySelector(".pBelow");
