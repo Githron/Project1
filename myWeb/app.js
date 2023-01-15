@@ -1,11 +1,13 @@
 //THIS IS JQUERY div id = link anchor hrrf function
-$("#link").click(function () {
-    window.location.href =
-        "https://githron.github.io/romelolacida.com/YT%20Clone/";
-});
+$(document).ready(function () {
+    $("#link").click(function () {
+        window.location.href =
+            "https://githron.github.io/romelolacida.com/YT%20Clone/";
+    });
 
-$(".botton").click(function () {
-    window.location.href = "index.html";
+    $(".botton").click(function () {
+        window.location.href = "index.html";
+    });
 });
 //end
 
@@ -68,7 +70,7 @@ boxAnime.forEach((element) => {
 
 //Javascript Mouse hover
 const boxes = document.querySelectorAll(".box");
-const defaultColor = boxes[0].style.backgroundColor;
+// const defaultColor = boxes[0].style.backgroundColor;
 const hR = document.querySelector(".hR");
 const cColor = document.querySelector(".pCenter");
 const bColor = document.querySelector(".pBelow");
