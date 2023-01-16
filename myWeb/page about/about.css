@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.aboutTop {
+    z-index: 999;
+    width: 100vw;
+    height: 577px;
+    background-color: #1f232f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pWrapper {
+    padding-top: 4.5rem;
+    margin: auto 2.5rem;
+    letter-spacing: 2px;
+}
+
+#par1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+#span1 {
+    background-color: white;
+    color: #1f232f;
+    padding: 6px 12px;
+    position: relative;
+    top: 14px;
+}
+
+/* mid */
+.backgroundPar {
+    width: 100vw;
+}
+
+#par2 {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 55px;
+}
+
+.midWrapper {
+    padding: 6.4rem 2.9rem;
+}
+
+.midWrapper hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(216, 216, 216);
+    margin-top: 8px;
+}
+.bTitle {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.bParagraph {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 3rem;
+}
+
+/* bott */
+.botDetails {
+    width: 100%;
+    box-shadow: inset 0px 50px 100px -100px rgb(11, 12, 16);
+}
+
+.dWrapper {
+    padding: 6.4rem 2.9rem;
+}
+
+.dWrapper hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(216, 216, 216);
+    margin-top: 8px;
+}
+
+.exp {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.expPar {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 55px;
+    margin-bottom: 60px;
+}
+
+.detailPar {
+    text-align: center;
+    margin: 0 2.5rem;
+}
+
+
+
+.detailPar .d1Hr {
+    width: 150px;
+    margin: auto;
+    border: none;
+    height: 1px;
+    background-color: rgb(194, 194, 194);
+    margin-top: -12px;
+    margin-bottom: 8px;
+}
+
+.date1 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #1f232f;
+    opacity: 0.8;
+}
+
+.expParTitle {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-top: 50px;
+}
+
+.expParDetail {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 10px;
+}
+
+.clickMore {
+    font-size: 0.9rem;
+    color: #999eab;
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 10px;
+    font-style: italic;
+    margin-bottom: 75px;
+}
+
+
+.moreDetail {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 35px;
+    margin-bottom: 75px;
+    transition: all 1s ease-out;
+    opacity: 0;
+    transform: translateY(-70%);
+    visibility: hidden;
+    display: none;
+}
+
+.moreDetail.open {
+    transition: all 1s ease-out;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.moreDetail2 {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 35px;
+    margin-bottom: 75px;
+    transition: all 1s ease-out;
+    opacity: 0;
+    transform: translateY(-70%);
+    visibility: hidden;
+    display: none;
+}
+.moreDetail2.open {
+    transition: all 1s ease-out;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+.clickMore2 {
+    font-size: 0.9rem;
+    color: #999eab;
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 10px;
+    font-style: italic;
+    margin-bottom: 75px;
+}
+
+
+
+.botHr3 {
+    border: none;
+    height: 1.3px;
+    background-color: rgb(195, 195, 195);
+    margin-bottom: 75px;
+}
+
+@media (min-width: 700px) {
+    .aboutTop {
+        height: 320px;
+    }
+    #par1 {
+        margin: 0 2.8rem;
+    }
+    #par1 br {
+        display: none;
+    }
+    #span1 {
+        top: 0;
+    }
+    #par2 {
+        margin-top: 20px;
+        margin: 0 2.8rem;
+    }
+
+    .midWrapper {
+        margin: 0 4.6rem;
+    }
+
+    .dWrapper {
+        margin: 0 4.6rem;
+    }
+}

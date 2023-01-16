@@ -47,6 +47,21 @@ header {
     }
 }
 
+.botton{
+    margin-top: 1.1rem;
+    margin-left: 1.2rem;
+    width: 60px;
+    position: absolute;
+    background-color: #1f232f;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.botton img{
+    width: 100%;
+    aspect-ratio: 100/90;
+    object-fit: cover;
+}
 .nav {
     height: 5.31rem;
     display: flex;
@@ -273,7 +288,13 @@ footer a {
     font-size: 1.1rem;
 }
 
+
+/* Desktop View*/
 @media (min-width: 700px) {
+    .botton{
+        margin: 1rem 3rem;
+    }
+
     .nav {
         margin: 0 3rem;
     }
@@ -327,7 +348,7 @@ footer a {
         width: 100%;
         margin: auto;
         width: 50%;
-        opacity: 0.15;
+        opacity: 1;
         width: 100%;
         height: 100%;
     }
