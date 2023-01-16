@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+
+
+.conTitle {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.conWrapper{
+    margin: 7rem 2.8rem;
+}
+
+.cHr3{
+    border: none;
+    background-color: rgb(189, 189, 189);
+    height: 1px;
+    margin-top: 7px;
+}
+
+.conParagraph {
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 1.5rem;
+    margin-bottom: 7rem;
+}
+
+.cBox3{
+    text-align: center;
+}
+
+.cBox3 i{
+    font-size: 45px;
+    color: #1f232f;
+}
+
+.cEmail3{
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+}
+
+.cEmailAdd3{
+    font-size: 1.1rem;
+    font-weight: 350;
+    line-height: 1.75;
+    margin-top: 3px;
+    color: #1f232f;
+}
+
+.cSendEmailtxt{
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 350;
+    line-height: 1.75;
+    border: 1px solid #1f232f;
+    width: 220px;
+    padding: 3px 15px;
+    margin-top: 5px;
+    margin-bottom: 3.7rem;
+}
+
+.cBox3 hr{
+    border: none;
+    background-color: rgb(189, 189, 189);
+    height: 1px;
+    margin-bottom: 3.8rem;
+}
+
+footer p{
+    color: white;
+    font-weight: 350;
+}
+
+
+@media (min-width: 700px){
+    .conWrapper{
+        margin: 4rem 7rem;
+    }
+}

@@ -13,6 +13,22 @@ $(document).ready(function () {
         window.location.href =
             "about.html";
     });
+
+    $("#contactLink").click(function () {
+        window.location.href =
+            "contact.html";
+    });
+
+    $(".l1").click(function () {
+        window.location.href =
+            "mailto:lacidaromelo@gmail.com";
+    });
+
+    $(".l2").click(function () {
+        window.location.href =
+            "https://www.facebook.com/ron.lacida?mibextid=ZbWKwL";
+    });
+
 });
 //end
 
