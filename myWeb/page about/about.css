@@ -220,7 +220,13 @@
     }
 
     .dWrapper {
-        margin: 0 4.6rem;
+        margin: 0 7.6rem;
         padding: 3.2rem 0;
+    }
+    .hideX{
+        margin: 0 5rem;
+    }
+    .hideX2{
+        margin: 0 5rem;
     }
 }
