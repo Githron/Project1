@@ -174,8 +174,7 @@ header {
     position: absolute;
     z-index: -1;
     width: 100%;
-    animation: bakimg 1000ms forwards;
-    animation-timing-function: ease-in-out;
+    animation: bakimg 1000ms ease-in-out forwards;
     animation-play-state: paused;
 }
 
