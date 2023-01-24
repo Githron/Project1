@@ -65,6 +65,14 @@
     color: #1f232f;
 }
 
+.cBox3 img{
+    width: 50px;
+}
+
+.l1, .l2, .l3{
+    cursor: pointer;
+}
+
 .cEmail3{
     font-weight: 800;
     font-size: 1rem;
@@ -90,6 +98,12 @@
     padding: 3px 15px;
     margin-top: 5px;
     margin-bottom: 3.7rem;
+    transition: all .5s ease-in-out;
+}
+
+.cSendEmailtxt:hover{
+    background-color: #1f232f;
+    color: white;
 }
 
 .cBox3 hr{

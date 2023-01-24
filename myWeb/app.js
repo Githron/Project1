@@ -29,9 +29,13 @@ $(document).ready(function () {
             "https://www.facebook.com/ron.lacida?mibextid=ZbWKwL";
     });
 
+    $(".l3").click(function () {
+        window.location.href =
+            "https://www.fiverr.com/share/yprPoG";
+    });
+
 });
 //end
-
 
 
 
