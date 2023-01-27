@@ -107,3 +107,30 @@ function toggle() {
 //         }, 500);
 //     }
 // });
+
+
+//aftercare collapse
+$(document).ready(function () {
+    $(".click").click(function () {
+        if ($(".clickMore").hasClass("open"))
+        {
+
+            $(".clickSeeMore").css("display", "block"); //seemore label
+
+            $(".clickMore").css("opacity", "0");
+            $(".clickMore").removeClass("open");
+        setTimeout(function () {
+            $(".clickMore").css("display", "none");
+        }, 1000);
+        } else {
+            $(".clickMore").css("display", "block");
+            $(".clickMore").animate({
+                opacity: 1
+            }, 1000, 'linear');
+            $(".clickMore").addClass("open");
+
+            $(".clickSeeMore").css("display", "none");
+        }
+    });
+});
+
