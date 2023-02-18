@@ -193,50 +193,52 @@ let viewResult = ()=>{
         </div>
     `;
 
-    document.querySelector("#start-again").addEventListener("click",()=>{
+    document.querySelector("#start-again").addEventListener("click", () => {
         quizRules();
     });
 
-    document.querySelector("#view-result").addEventListener("click",()=>{
+    document.querySelector("#view-result").addEventListener("click", () => {
         quizResult();
     });
 
-
+    // let quiz_result = document.querySelector(".content");
+    // quiz_questions.forEach((quiz,index) => {
+    //     console.log(quiz);
+    //     quiz_result.innerHTML += `
+    //     <div class="content-wrapper">
+    //             <h2 class="question">${index+1 + "." + quiz['question']}</h2>
+    //             <div class="option-container${index}"></div>
+    //     </div>
+    //     `;
 
     let quiz_result = document.querySelector(".content");
-    quiz_questions.forEach((quiz,index) => {
+    quiz_questions.forEach((quiz, index) => {
         console.log(quiz);
         quiz_result.innerHTML += `
         <div class="content-wrapper">
-                <h2 class="question">${index+1 + "." + quiz['question']}</h2>
+                <h2 class="question">${quiz["question"]}</h2>
                 <div class="option-container${index}"></div>
         </div>
         `;
 
-
         option_container = document.querySelector(`.option-container${index}`);
 
-        quiz['options'].forEach((option,index)=>{
-
-            
-            if(quiz['selected_answer'] == quiz['answer']){
-                if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>You</span></p>`
-                }else{
-                    option_container.innerHTML += `<p class="result-option">${option}</p>`
+        quiz["options"].forEach((option, index) => {
+            if (quiz["selected_answer"] == quiz["answer"]) {
+                if (index + 1 == quiz["answer"]) {
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>You</span></p>`;
+                } else {
+                    option_container.innerHTML += `<p class="result-option">${option}</p>`;
                 }
-            }else{
-                if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Correct</span></p>`
-                }else if(index+1 == quiz['selected_answer']){
-                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>You</span></p>`
-                }else{
-                    option_container.innerHTML += `<p class="result-option">${option}</p>`
+            } else {
+                if (index + 1 == quiz["answer"]) {
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Correct</span></p>`;
+                } else if (index + 1 == quiz["selected_answer"]) {
+                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>You</span></p>`;
+                } else {
+                    option_container.innerHTML += `<p class="result-option">${option}</p>`;
                 }
             }
-
-
         });
-
     });
 }
