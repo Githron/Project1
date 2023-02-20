@@ -82,8 +82,9 @@ let quizQuestion = (q) => {
           <div class="header">QUIZ APP</div>
           <div class="content">
             <div class="content-wrapper">
+            <span class="question-number">Question ${current_question}.</span>
               <h2 class="question">
-                <span class="question-number">${current_question}.</span>
+                
                 ${quiz_questions[q]["question"]}
               </h2>
               <div id="option-container">
@@ -277,8 +278,9 @@ let viewResult = () => {
         console.log(quiz);
         quiz_result.innerHTML += `
     <div class="content-wrapper">
+    <span class="question-number">${index + 1}.</span>
       <h2 class="question">
-        <span class="question-number">${index + 1}.</span>
+        
         ${quiz["question"]}
       </h2>
       <div class="option-container${index}"></div>
