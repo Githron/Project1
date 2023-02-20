@@ -8,7 +8,7 @@ let total_correct_ans = 0;
 // Execute the quizRules function after the window has finished loading
 window.onload = () => {
     quizRules();
-}
+};
 
 // Define the quizRules function
 let quizRules = () => {
@@ -29,8 +29,8 @@ let quizRules = () => {
     ol = document.querySelector("ol");
 
     // Iterate over the quiz_rules array and add each rule as a list item to the ordered list
-    quiz_rules.forEach(rule => {
-        ol.innerHTML += `<li>${rule}</li>`
+    quiz_rules.forEach((rule) => {
+        ol.innerHTML += `<li>${rule}</li>`;
     });
 
     // Select the "Start Quiz" button using the querySelector method
@@ -40,8 +40,7 @@ let quizRules = () => {
     start_quiz_btn.addEventListener("click", () => {
         quizQuestion(current_question);
     });
-}
-
+};
 
 // let quizQuestion = (q) => {
 //     q--;
@@ -49,7 +48,9 @@ let quizRules = () => {
 //     <div class="header">QUIZ APP</div>
 //         <div class="content">
 //             <div class="content-wrapper">
-//                 <h2 class="question">${current_question + "." + quiz_questions[q]['question']}</h2>
+//                 <h2 class="question">${
+//                     current_question + "." + quiz_questions[q]["question"]
+//                 }</h2>
 //                 <div id="option-container">
 //                 </div>
 //             </div>
@@ -59,29 +60,46 @@ let quizRules = () => {
 //         </div>
 //     `;
 
+// let quizQuestion = (q) => {
+//     q--;
+//     container.innerHTML = `
+//     <div class="header">QUIZ APP</div>
+//         <div class="content">
+//             <div class="content-wrapper">
+//                 <h2 class="question">${quiz_questions[q]["question"]}</h2>
+//                 <div id="option-container">
+//                 </div>
+//             </div>
+//             <div class="footer" id="footer">
+//                 <p id="timer">Time Left: 20 Sec</p>
+//             </div>
+//         </div>
+//     `;
 
 let quizQuestion = (q) => {
     q--;
     container.innerHTML = `
-    <div class="header">QUIZ APP</div>
-        <div class="content">
+          <div class="header">QUIZ APP</div>
+          <div class="content">
             <div class="content-wrapper">
-                <h1 class="question">${quiz_questions[q]['question']}</h1>
-                <div id="option-container">
-                </div>
+              <h2 class="question">
+                <span class="question-number">${current_question}.</span>
+                ${quiz_questions[q]["question"]}
+              </h2>
+              <div id="option-container">
+              </div>
             </div>
             <div class="footer" id="footer">
-                <p id="timer">Time Left: 20 Sec</p>
+              <p id="timer">Time Left: 20 Sec</p>
             </div>
-        </div>
-    `;
+          </div>
+        `;
 
     let options_container = document.querySelector("#option-container");
 
-    quiz_questions[q]['options'].forEach((option, index) => {
-        options_container.innerHTML += `<p class="option">${option}</p>`
+    quiz_questions[q]["options"].forEach((option) => {
+        options_container.innerHTML += `<p class="option">${option}</p>`;
     });
-
 
     options = document.querySelectorAll(".option");
 
@@ -89,38 +107,68 @@ let quizQuestion = (q) => {
         option.addEventListener("click", () => {
             clearInterval(interval);
             // adding next question button
-            document.querySelector("#footer").innerHTML += `<button id="next-question">Next</button>`;
+            document.querySelector(
+                "#footer"
+            ).innerHTML += `<button id="next-question">Next</button>`;
 
-            document.querySelector("#next-question").addEventListener("click", () => {
-                if (current_question == quiz_questions.length) {
+            document
+                .querySelector("#next-question")
+                .addEventListener("click", () => {
+                    if (current_question == quiz_questions.length) {
+                        clearInterval(interval);
+                        quizResult();
+                        return;
+                    }
+                    current_question++;
                     clearInterval(interval);
-                    quizResult();
-                    return;
-                }
-                current_question++;
-                clearInterval(interval);
-                quizQuestion(current_question);
-            });
-
+                    quizQuestion(current_question);
+                });
 
             // disable all options.
-            options.forEach(disabled => {
+            options.forEach((disabled) => {
                 disabled.style.pointerEvents = "none";
             });
 
             // storing selected answers
-            quiz_questions[q]['selected_answer'] = index + 1;
+            quiz_questions[q]["selected_answer"] = index + 1;
             console.log(quiz_questions);
 
-            if ((index + 1) == quiz_questions[q]["answer"]) {
+            if (index + 1 == quiz_questions[q]["answer"]) {
                 option.classList.add("correct");
                 total_correct_ans++;
                 option.innerHTML += "<span>Correct</span>";
+                console.log("correct");
+                option.style.backgroundColor = "#1bd027";
             } else {
                 option.classList.add("wrong");
+                // option.classList.remove("hover");
                 option.innerHTML += "<span>Wrong</span>";
+                console.log("wrong");
+                option.style.backgroundColor = "#e73030";
             }
 
+            // if (index + 1 == quiz_questions[q]["answer"]) {
+            //     option.classList.add("correct");
+            //     total_correct_ans++;
+            //     option.innerHTML += "<span>Correct</span>";
+            //     console.log("correct");
+            // } else {
+            //     option.classList.add("wrong");
+            //     option.innerHTML += "<span>Wrong</span>";
+            //     console.log("wrong");
+            // }
+
+            // option.addEventListener("mouseover", function () {
+            //     option.classList.add("hovered");
+            // });
+
+            // option.addEventListener("mouseout", function () {
+            //     option.classList.remove("hovered");
+            // });
+
+            // option.addEventListener("click", function () {
+            //     option.classList.remove("hovered");
+            // });
         });
     });
 
@@ -132,30 +180,35 @@ let quizQuestion = (q) => {
         if (time_left == 0) {
             clearInterval(interval);
             // disable all options.
-            options.forEach(disabled => {
+            options.forEach((disabled) => {
                 disabled.style.pointerEvents = "none";
             });
 
             // adding next question button
-            document.querySelector("#footer").innerHTML += `<button id="next-question">Next</button>`;
+            document.querySelector(
+                "#footer"
+            ).innerHTML += `<button id="next-question">Next</button>`;
 
-            document.querySelector("#next-question").addEventListener("click", () => {
-                if (current_question == quiz_questions.length) {
-                    clearInterval(interval);
-                    quizResult();
-                    return;
-                }
-                current_question++;
-                quizQuestion(current_question);
-            });
+            document
+                .querySelector("#next-question")
+                .addEventListener("click", () => {
+                    if (current_question == quiz_questions.length) {
+                        clearInterval(interval);
+                        quizResult();
+                        return;
+                    }
+                    current_question++;
+                    quizQuestion(current_question);
+                });
             document.querySelector("#timer").classList.add("time-over");
             document.querySelector("#timer").innerHTML = `Time Over`;
-        }else{   
-            document.querySelector("#timer").innerHTML = `Time Left: ${time_left} Sec`;
+        } else {
+            document.querySelector(
+                "#timer"
+            ).innerHTML = `Time Left: ${time_left} Sec`;
         }
     }, 1000);
-}
-
+};
 
 let quizResult = () => {
     container.innerHTML = `
@@ -170,18 +223,16 @@ let quizResult = () => {
         </div>
     `;
 
-    document.querySelector("#start-again").addEventListener("click",()=>{
+    document.querySelector("#start-again").addEventListener("click", () => {
         quizRules();
     });
 
-    
-    document.querySelector("#detailed-result").addEventListener("click",()=>{
+    document.querySelector("#detailed-result").addEventListener("click", () => {
         viewResult();
     });
-}
+};
 
-
-let viewResult = ()=>{
+let viewResult = () => {
     container.innerHTML = `
     <div class="header">RESULT DETAIL</div>
         <div class="content"></div>
@@ -211,15 +262,28 @@ let viewResult = ()=>{
     //     </div>
     //     `;
 
+    // let quiz_result = document.querySelector(".content");
+    // quiz_questions.forEach((quiz, index) => {
+    //     console.log(quiz);
+    //     quiz_result.innerHTML += `
+    //     <div class="content-wrapper">
+    //             <h2 class="question">${quiz["question"]}</h2>
+    //             <div class="option-container${index}"></div>
+    //     </div>
+    //     `;
+
     let quiz_result = document.querySelector(".content");
     quiz_questions.forEach((quiz, index) => {
         console.log(quiz);
         quiz_result.innerHTML += `
-        <div class="content-wrapper">
-                <h2 class="question">${quiz["question"]}</h2>
-                <div class="option-container${index}"></div>
-        </div>
-        `;
+    <div class="content-wrapper">
+      <h2 class="question">
+        <span class="question-number">${index + 1}.</span>
+        ${quiz["question"]}
+      </h2>
+      <div class="option-container${index}"></div>
+    </div>
+  `;
 
         option_container = document.querySelector(`.option-container${index}`);
 
@@ -241,4 +305,4 @@ let viewResult = ()=>{
             }
         });
     });
-}
+};

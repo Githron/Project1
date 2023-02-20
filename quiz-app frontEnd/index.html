@@ -9,12 +9,30 @@
     <link rel="stylesheet" href="style.css">
     <!-- visit fontawesome.com for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
 </head>
 
 <body>
+
     <div id="container"></div>
     <script src="quiz.js"></script>
     <script src="script.js"></script>
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+
+    $(document).ready(function () {
+        $(".option").mouseenter(function () {
+            setTimeout(function () {
+                $(".option").css("background-color", "red");
+
+            }, 1); // timeout before executing
+        });
+
+        $(".option").mouseout(function () {
+            $(".option").css("background-color", "rgb(226, 80, 43)");
+        });
+    });
+</script>
 </body>
 
 </html>

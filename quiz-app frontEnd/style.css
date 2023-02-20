@@ -83,7 +83,14 @@ button:hover
     font-weight: 700;
     padding: 5px 3px;
 
-    text-align: center;
+    /* margin-left: 3rem; */
+
+    /* text-align: center; */
+}
+
+.question-number{
+    margin-right: 6rem;
+    color: #354b6f;
 }
 
 .option,.result-option
@@ -101,8 +108,8 @@ button:hover
     font-weight: 500;
     position: relative;
 
-    text-align: center;
-    justify-content: center;
+    /* text-align: center;
+    justify-content: center; */
 }
 .option span,.result-option span
 {   
