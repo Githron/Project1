@@ -75,6 +75,7 @@ button:hover
     padding: 10px 30px;
     max-height: 400px;
     overflow: auto;
+    position: relative;
 }
 .question
 {
@@ -84,13 +85,14 @@ button:hover
     padding: 5px 3px;
 
     /* margin-left: 3rem; */
-
-    /* text-align: center; */
+    text-align: center;
 }
 
 .question-number{
-    margin-right: 6rem;
+    /* margin-right: 6rem; */
+    position: absolute;
     color: #354b6f;
+    display: flex;
 }
 
 .option,.result-option
