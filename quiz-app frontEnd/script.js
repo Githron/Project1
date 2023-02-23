@@ -31,6 +31,14 @@ var sfx = {
             console.log("wow");
         },
     }),
+
+    fail: new Howl({
+        src: ["failed.mp3"],
+        loop: false,
+        onend: function () {
+            console.log("wow");
+        },
+    }),
 };
 
 // function stopQuizMusic() {
@@ -226,7 +234,35 @@ let quizQuestion = (q) => {
 };
 
 let quizResult = () => {
-    sfx.wow.play();
+    if (total_correct_ans > 5) {
+        // execute function here
+        sfx.wow.play();
+        container.innerHTML = `
+    <div class="header">QUIZ RESULT</div>
+        <div id="trophy">
+        <img id="trophyImg" src="trophy.png" alt="">
+        </div>
+        <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
+        <div id="result-footer">
+            <button id="start-again">Start Again</button>
+            <button id="detailed-result">View Detail</button>
+        </div>
+    `;
+    } else {
+        sfx.fail.play();
+        container.innerHTML = `
+    <div class="header">QUIZ RESULT</div>
+        <div id="trophy">
+        <img id="trophyImg" src="medal.png" alt="">
+        </div>
+        <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
+        <div id="result-footer">
+            <button id="start-again">Start Again</button>
+            <button id="detailed-result">View Detail</button>
+        </div>
+    `;
+    }
+
     // container.innerHTML = `
     // <div class="header">QUIZ RESULT</div>
     //     <div id="trophy">
@@ -238,18 +274,6 @@ let quizResult = () => {
     //         <button id="detailed-result">View Detail</button>
     //     </div>
     // `;
-
-    container.innerHTML = `
-    <div class="header">QUIZ RESULT</div>
-        <div id="trophy">
-        <img id="trophyImg" src="trophy.png" alt="">
-        </div>
-        <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
-        <div id="result-footer">
-            <button id="start-again">Start Again</button>
-            <button id="detailed-result">View Detail</button>
-        </div>
-    `;
 
     document.querySelector("#start-again").addEventListener("click", () => {
         // sfx.quizMusic.fade(1, 0, 2000);

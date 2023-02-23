@@ -1,9 +1,8 @@
 let quiz_rules = [
     "You Have Only 20 Seconds For Each Question.",
     "Once You Select Any Answer.It Can't Be Undone",
-    "You'll Get Points On The Basic Of Your Correct Answers."
+    "You'll Get Points On The Basic Of Your Correct Answers.",
 ];
-
 
 let quiz_questions = [
     // question 1
@@ -230,12 +229,3 @@ let quiz_questions = [
         answer: 4, // The perimeter of a rectangle is found by adding up the lengths of all its sides. In this case, the length is 5 units and the width is 3 units, so the perimeter is 2 x (5 units + 3 units) = 2 x 8 units = 16 units.
     },
 ];
-
-
-
-
-
-
-    
-
-  
