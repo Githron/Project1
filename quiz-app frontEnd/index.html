@@ -13,25 +13,15 @@
 </head>
 
 <body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js'
+        integrity='sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=='
+        crossorigin='anonymous' referrerpolicy='no-referrer'></script>
 
     <div id="container"></div>
+
     <script src="quiz.js"></script>
     <script src="script.js"></script>
-<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-<script>
 
-    $(document).ready(function () {
-        $(".option").mouseenter(function () {
-            setTimeout(function () {
-                $(".option").css("background-color", "red");
-
-            }, 1); // timeout before executing
-        });
-
-        $(".option").mouseout(function () {
-            $(".option").css("background-color", "rgb(226, 80, 43)");
-        });
-    });
 </script>
 </body>
 

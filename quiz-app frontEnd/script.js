@@ -1,9 +1,51 @@
+//soumd effects
+var sfx = {
+    quizMusic: new Howl({
+        src: ["quiz-music.mp3"],
+        loop: true,
+        onend: function () {
+            console.log("done playing music");
+        },
+    }),
+
+    correct: new Howl({
+        src: ["correct.mp3"],
+        loop: false,
+        onend: function () {
+            console.log("correct");
+        },
+    }),
+
+    wrong: new Howl({
+        src: ["wrong.mp3"],
+        loop: false,
+        onend: function () {
+            console.log("wrong");
+        },
+    }),
+
+    wow: new Howl({
+        src: ["anime wow.mp3"],
+        loop: false,
+        onend: function () {
+            console.log("wow");
+        },
+    }),
+};
+
+// function stopQuizMusic() {
+//     sfx.quizMusic.fade(1, 0, 2000);
+//     setTimeout(function () {
+//         sfx.quizMusic.stop();
+//     }, 2000);
+// }
+
 // Select the container element with the ID "container" using the querySelector method
 let container = document.querySelector("#container");
 
 // Initialize variables to keep track of the current question number and total correct answers
-let current_question = 1;
-let total_correct_ans = 0;
+// let current_question = 1;
+// let total_correct_ans = 0;
 
 // Execute the quizRules function after the window has finished loading
 window.onload = () => {
@@ -19,10 +61,14 @@ let quizRules = () => {
     // Set the container's HTML to display the quiz rules and a "Start Quiz" button
     container.innerHTML = `
     <div class="header">QUIZ RULES</div>
-        <ol></ol>
-        <div id="start-quiz-wrapper">
+        <ol>
+        
+        </ol>
+    <div id="start-quiz-wrapper">
+
             <button id="start-quiz">Start Quiz</button>
-        </div>
+
+    </div>
     `;
 
     // Select the ordered list element using the querySelector method
@@ -39,67 +85,56 @@ let quizRules = () => {
     // Add a click event listener to the "Start Quiz" button that will call the quizQuestion function when clicked
     start_quiz_btn.addEventListener("click", () => {
         quizQuestion(current_question);
+        // sfx.quizMusic.volume(1);
+        // sfx.quizMusic.play();
+        if (sfx.quizMusic.playing()) {
+        } else {
+            sfx.quizMusic.volume(1); // set volume to 50%
+            sfx.quizMusic.play();
+        }
     });
 };
 
-// let quizQuestion = (q) => {
-//     q--;
-//     container.innerHTML = `
-//     <div class="header">QUIZ APP</div>
-//         <div class="content">
-//             <div class="content-wrapper">
-//                 <h2 class="question">${
-//                     current_question + "." + quiz_questions[q]["question"]
-//                 }</h2>
-//                 <div id="option-container">
-//                 </div>
-//             </div>
-//             <div class="footer" id="footer">
-//                 <p id="timer">Time Left: 20 Sec</p>
-//             </div>
-//         </div>
-//     `;
-
-// let quizQuestion = (q) => {
-//     q--;
-//     container.innerHTML = `
-//     <div class="header">QUIZ APP</div>
-//         <div class="content">
-//             <div class="content-wrapper">
-//                 <h2 class="question">${quiz_questions[q]["question"]}</h2>
-//                 <div id="option-container">
-//                 </div>
-//             </div>
-//             <div class="footer" id="footer">
-//                 <p id="timer">Time Left: 20 Sec</p>
-//             </div>
-//         </div>
-//     `;
-
+// Define a function called quizQuestion that takes a parameter q
 let quizQuestion = (q) => {
+    // Decrement the value of q by 1
     q--;
+    // Use template literals to create a block of HTML code and assign it to the innerHTML property of an element with the container ID
     container.innerHTML = `
           <div class="header">QUIZ APP</div>
+
           <div class="content">
-            <div class="content-wrapper">
-            <span class="question-number">Question ${current_question}.</span>
-              <h2 class="question">
+
+                <div class="content-wrapper">
+
+                    <span class="question-number">Question ${current_question}.</span>
+
+                        <h2 class="question">                           
+                            ${quiz_questions[q]["question"]}
+                        </h2>
+
+                        <div id="option-container">
+
+                        </div>
+                </div>
+
+                <div class="footer" id="footer">
+                    <p id="timer">Time Left: 20 Sec</p>
+                </div>
                 
-                ${quiz_questions[q]["question"]}
-              </h2>
-              <div id="option-container">
-              </div>
-            </div>
-            <div class="footer" id="footer">
-              <p id="timer">Time Left: 20 Sec</p>
-            </div>
           </div>
         `;
 
+    // This line gets the HTML element with the ID "option-container"
     let options_container = document.querySelector("#option-container");
 
+    // This line loops through the options for the current quiz question and performs the following steps for each option
     quiz_questions[q]["options"].forEach((option) => {
-        options_container.innerHTML += `<p class="option">${option}</p>`;
+        // This line creates a new HTML paragraph element with the class "option" and the option text inside
+        // The backticks (`) allow for interpolation of the option text inside the string
+        let optionHTML = `<p class="option">${option}</p>`;
+        // This line appends the newly created HTML paragraph element to the options container element
+        options_container.innerHTML += optionHTML;
     });
 
     options = document.querySelectorAll(".option");
@@ -140,36 +175,15 @@ let quizQuestion = (q) => {
                 option.innerHTML += "<span>Correct</span>";
                 console.log("correct");
                 option.style.backgroundColor = "#1bd027";
+                sfx.correct.play();
             } else {
                 option.classList.add("wrong");
                 // option.classList.remove("hover");
                 option.innerHTML += "<span>Wrong</span>";
                 console.log("wrong");
                 option.style.backgroundColor = "#e73030";
+                sfx.wrong.play();
             }
-
-            // if (index + 1 == quiz_questions[q]["answer"]) {
-            //     option.classList.add("correct");
-            //     total_correct_ans++;
-            //     option.innerHTML += "<span>Correct</span>";
-            //     console.log("correct");
-            // } else {
-            //     option.classList.add("wrong");
-            //     option.innerHTML += "<span>Wrong</span>";
-            //     console.log("wrong");
-            // }
-
-            // option.addEventListener("mouseover", function () {
-            //     option.classList.add("hovered");
-            // });
-
-            // option.addEventListener("mouseout", function () {
-            //     option.classList.remove("hovered");
-            // });
-
-            // option.addEventListener("click", function () {
-            //     option.classList.remove("hovered");
-            // });
         });
     });
 
@@ -212,10 +226,23 @@ let quizQuestion = (q) => {
 };
 
 let quizResult = () => {
+    sfx.wow.play();
+    // container.innerHTML = `
+    // <div class="header">QUIZ RESULT</div>
+    //     <div id="trophy">
+    //         <i class="fa-solid fa-trophy"></i>
+    //     </div>
+    //     <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
+    //     <div id="result-footer">
+    //         <button id="start-again">Start Again</button>
+    //         <button id="detailed-result">View Detail</button>
+    //     </div>
+    // `;
+
     container.innerHTML = `
     <div class="header">QUIZ RESULT</div>
         <div id="trophy">
-            <i class="fa-solid fa-trophy"></i>
+        <img id="trophyImg" src="trophy.png" alt="">
         </div>
         <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
         <div id="result-footer">
@@ -225,6 +252,13 @@ let quizResult = () => {
     `;
 
     document.querySelector("#start-again").addEventListener("click", () => {
+        // sfx.quizMusic.fade(1, 0, 2000);
+        // console.log("music stop");
+
+        // setTimeout(function () {
+        //     sfx.quizMusic.stop();
+        // }, 2000); // wait for 2 seconds (same duration as the fade effect)
+
         quizRules();
     });
 
@@ -246,6 +280,12 @@ let viewResult = () => {
     `;
 
     document.querySelector("#start-again").addEventListener("click", () => {
+        // sfx.quizMusic.fade(1, 0, 2000);
+        // console.log("music stop");
+
+        // setTimeout(function () {
+        //     sfx.quizMusic.stop();
+        // }, 2000); // wait for 2 seconds (same duration as the fade effect)
         quizRules();
     });
 

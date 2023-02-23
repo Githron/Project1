@@ -32,7 +32,7 @@ body
     display: grid;
     place-items: center;
     font-size: 25px;
-    color: #f9d126;
+    color: #ffd951;
     font-weight: bold;
     text-shadow: 1px 1px 2px #1b2135ff;
     border-bottom: 1px solid #ffffff20;
@@ -54,7 +54,7 @@ li
 }
 button
 {
-    background-color: #f9d126;
+    background-color: #ffd951;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -67,7 +67,7 @@ button
 }
 button:hover
 {
-    background-color: #e9be0e;
+    background-color: #ffd951;
 }
 
 .content
@@ -120,7 +120,7 @@ button:hover
     border-radius: 5px;
     font-size: 11px;
     font-weight: bold;
-    background-color: #e9be0e;
+    background-color: #ffd951;
     color: #1e293b;
     padding: 5px;
 }
@@ -128,7 +128,7 @@ button:hover
 
 .option:hover
 {
-    background-color: #e9be0e;
+    background-color: #ffd951;
     color: #1e293b;
 }
 
@@ -153,14 +153,14 @@ button:hover
 
 .wrong
 {
-    background-color: #e73030;
+    background-color: #ff4343;
     color: #1e293b;
 }
 
 .wrong span
 {
     background: #1e293b;
-    color: #e73030;
+    color: #ff4343;
 }
 
 
@@ -176,12 +176,12 @@ button:hover
     font-size: 13px;
     font-weight: 500;
     margin: 10px 0 20px 0;
-    color: #e9be0e;
+    color: #ffd951;
     font-weight: bold;
 }
 .time-over
 {
-    color: #e73030 !important;
+    color: #ff4343 !important;
 }
 
 
@@ -193,6 +193,10 @@ button:hover
     text-align: center;
     margin: 40px 0;
 }
+
+#trophyImg{
+    width: 120px;
+}
 #score
 {
     text-align: center;
@@ -200,7 +204,7 @@ button:hover
 }
 #score b
 {
-    color: #e9be0e;
+    color: #ffd951;
     font-size: 25px;
 }
 .result-score
@@ -221,11 +225,11 @@ button:hover
 #detailed-result
 {
     background: transparent;
-    color: #e9be0e;
-    border: 1px solid #e9be0e;
+    color: #ffd951;
+    border: 1px solid #ffd951;
 }
 #detailed-result:hover
 {
-    background: #e9be0e;
+    background: #ffd951;
     color: #0f172a;
 }
