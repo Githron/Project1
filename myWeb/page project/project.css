@@ -54,6 +54,7 @@
 }
 
 .box{
+    cursor: pointer;
     width: 100%;
     aspect-ratio: 100/76.5;
     color: #1f232f;

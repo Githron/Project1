@@ -5,23 +5,25 @@ $(document).ready(function () {
             "https://githron.github.io/romelolacida.com/YT%20Clone/";
     });
 
+    $("#link2").click(function () {
+        window.location.href =
+            "https://githron.github.io/Project1/quiz-app%20frontEnd/";
+    });
+
     $(".botton").click(function () {
         window.location.href = "index.html";
     });
 
     $("#aboutLink").click(function () {
-        window.location.href =
-            "about.html";
+        window.location.href = "about.html";
     });
 
     $("#contactLink").click(function () {
-        window.location.href =
-            "contact.html";
+        window.location.href = "contact.html";
     });
 
     $(".l1").click(function () {
-        window.location.href =
-            "mailto:lacidaromelo@gmail.com";
+        window.location.href = "mailto:lacidaromelo@gmail.com";
     });
 
     $(".l2").click(function () {
@@ -30,17 +32,14 @@ $(document).ready(function () {
     });
 
     $(".l3").click(function () {
-        window.location.href =
-            "https://www.fiverr.com/share/yprPoG";
+        window.location.href = "https://www.fiverr.com/share/yprPoG";
     });
 
+    $(".l4").click(function () {
+        window.location.href = "https://www.frontendmentor.io/profile/Githron";
+    });
 });
 //end
-
-
-
-
-
 
 // @keyframes fadeIn {
 //     0% {opacity: 0;}
