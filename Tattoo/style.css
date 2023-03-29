@@ -24,11 +24,6 @@ body {
     animation-play-state: paused;
 }
 
-.overflowhide {
-    height: 100vh;
-    overflow: auto;
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -36,6 +31,11 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.overflowhide {
+    height: 100vh;
+    overflow: auto;
 }
 
 header {
