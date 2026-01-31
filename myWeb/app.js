@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $("#link2").click(function () {
         window.location.href =
-            "https://githron.github.io/Project1/quiz-app%20frontEnd/";
+            "https://githron.github.io/project1/quiz-app%20frontEnd/";
     });
 
     $(".botton").click(function () {
